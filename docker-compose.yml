@@ -3,8 +3,9 @@ version: '3.8'
 services:
   web:
     build: .
+    image: web:latest         # ← add this line
     ports:
-      - "80:3000"                   # map host port 80 → container 3000
+      - "127.0.0.1:8080:3000"  # ← host:container
     environment:
       - NODE_ENV=production
     restart: unless-stopped
