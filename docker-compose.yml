@@ -5,7 +5,7 @@ services:
     build: .
     image: web:latest         # ← add this line
     ports:
-      - "127.0.0.1:8080:3000"  # ← host:containera
+      - "8080:3000"
     environment:
       - NODE_ENV=production
     restart: unless-stopped
