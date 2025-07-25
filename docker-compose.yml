@@ -23,7 +23,7 @@ services:
 
   mongodb_treasury:
     image: mongo:7.0
-    container_name: mongodb_trasury
+    container_name: mongodb_treasury
     ports:
       - "2718:27017"
     volumes:
