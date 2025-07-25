@@ -27,9 +27,12 @@ services:
     ports:
       - "2718:27017"
     volumes:
-      - mongo_alt_data:/data/db
+      - mongo_treasury_data:/data/db
     command: ["mongod", "--auth"]
 
 networks:
   axienet:
     driver: bridge
+
+volumes:
+  mongo_treasury_data:
