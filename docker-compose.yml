@@ -21,6 +21,15 @@ services:
     networks:
       - axienet
 
+  mongodb_treasury:
+    image: mongo:7.0
+    container_name: mongodb_trasury
+    ports:
+      - "2718:27017"
+    volumes:
+      - mongo_alt_data:/data/db
+    command: ["mongod", "--auth"]
+
 networks:
   axienet:
     driver: bridge
