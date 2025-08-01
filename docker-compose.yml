@@ -20,6 +20,8 @@ services:
       - web
     networks:
       - axienet
+      - default
+      - sharednet
 
   mongodb_treasury:
     image: mongo:7.0
@@ -33,6 +35,8 @@ services:
 networks:
   axienet:
     driver: bridge
+  sharednet:
+    external: true
 
 volumes:
   mongo_treasury_data:
